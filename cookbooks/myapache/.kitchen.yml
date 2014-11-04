@@ -2,6 +2,9 @@
 driver:
   name: vagrant
   log_level: info
+  network:
+   - ["forwarded_port", {guest: 80, host: 8080}]
+   - ["forwarded_port", {guest: 8080, host: 8090}]
 provisioner:
   name: chef_zero
 
@@ -12,5 +15,6 @@ platforms:
 suites:
   - name: default
     run_list:
-      - recipe[test_vm::default]
+      - recipe[myapache::default]
+      - recipe[tomcat::default]
     attributes:

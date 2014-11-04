@@ -1,4 +1,4 @@
 # test_vm
 
-TODO: Enter the cookbook description here.
+A simple cookbook to create a new virtual machine.
 
