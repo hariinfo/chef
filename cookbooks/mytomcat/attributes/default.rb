@@ -1,0 +1,5 @@
+default['java']['install_flavor']='oracle'
+default['java']['jdk_version']='7'
+default['java']['oracle']['accept_oracle_download_terms']='true'
+default['java']['java_home']='/opt/install/java'
+default["tomcat"]["base_version"]='7'

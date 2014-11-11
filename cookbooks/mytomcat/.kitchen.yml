@@ -1,0 +1,20 @@
+---
+driver:
+  name: vagrant
+  log_level: info
+  network:
+   - ["forwarded_port", {guest: 8080, host: 8080}]
+
+provisioner:
+  name: chef_zero
+
+platforms:
+  - name: ubuntu-14.04
+#  - name: centos-6.4
+
+suites:
+  - name: default
+    run_list:
+      - recipe[mytomcat::default]
+      - recipe[tomcat::default]
+    attributes:
